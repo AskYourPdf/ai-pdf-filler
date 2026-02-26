@@ -60,8 +60,11 @@ simplicity-cli new \
 ### Existing form id
 
 ```bash
-simplicity-cli existing FORM_ID --context "Use latest applicant profile data."
+simplicity-cli existing FORM_ID --context "first_name: John; last_name: Smoke; dob: 1990-07-07"
 ```
+
+`--context` is the source data used to fill form fields.
+Use `--instructions` only for optional autofill behavior guidance.
 
 ### Task monitoring
 

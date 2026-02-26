@@ -52,12 +52,15 @@ Options:
 ## Existing form workflow
 
 ```bash
-simplicity-cli existing FORM_ID --context "latest profile"
+simplicity-cli existing FORM_ID --context "first_name: John; last_name: Smoke; dob: 1990-07-07"
 ```
 
 ```bash
 simplicity-cli existing FORM_ID --instructions "prefer exact legal names"
 ```
+
+`--context` provides the field data to fill.
+`--instructions` provides optional guidance for autofill behavior.
 
 ## Task workflow
 
