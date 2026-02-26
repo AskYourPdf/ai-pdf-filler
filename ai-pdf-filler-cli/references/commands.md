@@ -7,6 +7,14 @@ simplicity-cli --help
 simplicity-cli help
 ```
 
+If the command is missing, install first:
+
+```bash
+uv tool install ai-pdf-filler
+# fallback
+python3 -m pip install ai-pdf-filler
+```
+
 ## Auth
 
 ```bash

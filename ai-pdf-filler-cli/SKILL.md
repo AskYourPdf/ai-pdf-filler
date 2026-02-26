@@ -11,14 +11,18 @@ Prefer direct command execution over manual API calls when this skill applies.
 ## Core Workflow
 
 1. Confirm `simplicity-cli` is installed by running `simplicity-cli --help`.
-2. Ensure authentication is available:
+2. If missing, install the CLI:
+- Preferred: `uv tool install ai-pdf-filler`
+- Fallback: `python3 -m pip install ai-pdf-filler`
+- Re-check with `simplicity-cli --help`.
+3. Ensure authentication is available:
 - Save key once: `simplicity-cli --api-key "<api_key>"`.
 - Or set env var: `SIMPLICITY_AI_API_KEY`.
-3. Choose the autofill path:
+4. Choose the autofill path:
 - New PDF form: use `simplicity-cli new`.
 - Existing form id: use `simplicity-cli existing FORM_ID`.
-4. Wait for completion unless the user explicitly requests async behavior.
-5. Return the resulting task id, form/document id, and downloaded output path.
+5. Wait for completion unless the user explicitly requests async behavior.
+6. Return the resulting task id, form/document id, and downloaded output path.
 
 ## Command Patterns
 
@@ -83,6 +87,7 @@ simplicity-cli wait TASK_ID --poll-interval-seconds 2 --max-wait-seconds 1800
 
 ## Failure Handling
 
+- If `simplicity-cli` is not found, install `ai-pdf-filler` first, then retry.
 - If auth is missing, instruct saving key with `simplicity-cli --api-key "<key>"` or setting `SIMPLICITY_AI_API_KEY`.
 - If a task fails, report task id and failure message; do not hide API error details.
 - If download fails after successful task completion, still return task/form identifiers.
