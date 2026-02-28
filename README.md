@@ -11,5 +11,5 @@ Codex skill repository for AI PDF form filling with `simplicity-cli`.
 ## Quick usage
 
 1. Install the CLI: `uv tool install ai-pdf-filler` (or `pip install ai-pdf-filler`)
-2. Save API key once: `simplicity-cli --api-key "<your_api_key>"`
+2. Save API key once: `simplicity-cli login`
 3. Invoke the skill as `$ai-pdf-filler-cli` in Codex prompts.

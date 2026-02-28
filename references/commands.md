@@ -18,7 +18,11 @@ python3 -m pip install ai-pdf-filler
 ## Auth
 
 ```bash
-simplicity-cli --api-key "<api_key>"
+simplicity-cli login
+```
+
+```bash
+printf '%s' "$SIMPLICITY_AI_API_KEY" | simplicity-cli login --api-key-stdin
 ```
 
 Key precedence:
