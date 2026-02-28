@@ -17,6 +17,8 @@ python3 -m pip install ai-pdf-filler
 
 ## Auth
 
+Create an account and obtain an API key from `https://simplicity.ai`.
+
 ```bash
 simplicity-cli login
 ```

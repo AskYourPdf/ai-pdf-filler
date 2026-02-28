@@ -15,7 +15,7 @@ Prefer direct command execution over manual API calls when this skill applies.
 - Preferred: `uv tool install ai-pdf-filler`
 - Fallback: `python3 -m pip install ai-pdf-filler`
 - Re-check with `simplicity-cli --help`.
-3. Ensure authentication is available:
+3. Ensure authentication is available (create an account and get API key at `https://simplicity.ai`):
 - Preferred: run `simplicity-cli login` and paste key in hidden prompt.
 - Non-interactive: `printf '%s' "$SIMPLICITY_AI_API_KEY" | simplicity-cli login --api-key-stdin`.
 - Or set env var: `SIMPLICITY_AI_API_KEY`.
